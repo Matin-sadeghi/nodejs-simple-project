@@ -1,0 +1,60 @@
+<form class="form-signin" action="/users/register" method="POST">
+  <div style="text-align: center">
+    <img
+      class="mb-4"
+      src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+      alt=""
+      width="72"
+      height="72"
+    />
+  </div>
+  <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
+    ثبت نام کاربر
+  </h1>
+  <%- include("./includes/validationErrors.ejs") %>
+  <label for="inputFullname" class="sr-only">نام کاربری</label>
+  <input
+    id="inputFullname"
+    name="fullname"
+    class="form-control mb-2"
+    placeholder="نام کاربری"
+    required
+    autofocus
+  />
+
+  <label for="inputEmail" class="sr-only">آدرس ایمیل </label>
+  <input
+    type="email"
+    name="email"
+    id="inputEmail"
+    class="form-control mb-2"
+    placeholder="آدرس ایمیل"
+    required
+  />
+  <label for="inputPassword" class="sr-only">کلمه عبور</label>
+  <input
+    type="password"
+    name="password"
+    id="inputPassword"
+    class="form-control mb-2"
+    placeholder="کلمه عبور"
+    required
+  />
+  <label for="inputConfirmPassword" class="sr-only">تکرار کلمه عبور</label>
+  <input
+    type="password"
+    name="confirmPassword"
+    id="inputConfirmPassword"
+    class="form-control"
+    placeholder="تکرار کلمه عبور"
+    required
+  />
+  <div class="checkbox mb-3">
+    <label>
+      <a href="/users/login">اکانت کاربری دارم</a>
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">
+    ثبت نام
+  </button>
+</form>

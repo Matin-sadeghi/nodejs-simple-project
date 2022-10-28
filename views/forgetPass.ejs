@@ -1,0 +1,23 @@
+<form
+  id="loginform"
+  class="form-signin"
+  action="/users/forget-password"
+  method="post"
+>
+  <h1 class="h3 mb-3 font-weight-normal">فراموشی کلمه عبور</h1>
+  <%- include("./includes/loginMessages.ejs") %>
+  <label for="inputEmail" class="sr-only">آدرس ایمیل</label>
+  <input
+    required
+    placeholder="آدرس ایمیل"
+    class="form-control mb-2"
+    type="email"
+    name="email"
+    id="inputEmail"
+    autofocus
+  />
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">
+    ریست پسورد
+  </button>
+</form>

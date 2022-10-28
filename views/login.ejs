@@ -1,0 +1,54 @@
+<form class="form-signin" action="/users/login" method="POST">
+  <div style="text-align: center">
+    <img
+      class="mb-4"
+      src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+      alt=""
+      width="72"
+      height="72"
+    />
+  </div>
+  <h1 style="text-align: center" class="h3 mb-3 font-weight-normal">
+    ورود به بخش مدیریت
+  </h1>
+  <%- include("./includes/loginMessages.ejs") %>
+  <label for="inputEmail" class="sr-only">آدرس ایمیل </label>
+  <input
+    type="email"
+    name="email"
+    id="inputEmail"
+    class="form-control mb-2"
+    placeholder="آدرس ایمیل"
+    required
+    autofocus
+  />
+  <label for="inputPassword" class="sr-only">کلمه عبور</label>
+  <input
+    type="password"
+    name="password"
+    id="inputPassword"
+    class="form-control"
+    placeholder="کلمه عبور"
+    required
+  />
+
+  <div class="form-group">
+    <div
+      class="g-recaptcha"
+      data-sitekey="6LcDQREhAAAAAEP6GlOyLsHzhwaptkvYmRW-2GLn"
+    ></div>
+  </div>
+  <div class="checkbox mb-3">
+    <label>
+      <input name="rememberMe" type="checkbox" value="remember-me" /> مرا به
+      خاطر بسپار
+    </label>
+  </div>
+
+  <div class="mb-2">
+    <a href="/users/register">ثبت نام اکانت کاربری</a> |
+    <a  href="/users/forget-password">فراموشی کلمه عبور</a>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">ورود</button>
+</form>
